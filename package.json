@@ -1,10 +1,10 @@
 {
-  "name": "generate-snippets-table",
-  "version": "0.0.0",
-  "description": "Tool to easily generate a table of snippets",
+  "name": "snippets-table",
+  "version": "0.0.0-semantically-released",
+  "description": "Tool to easily manage a table of snippets",
   "main": "dist/cli.js",
   "bin": {
-    "generate-snippets-table": "dist/cli.js"
+    "snippets-table": "dist/cli.js"
   },
   "scripts": {
     "build": "kcd-scripts build",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arthurdenner/generate-snippets-table.git"
+    "url": "git+https://github.com/arthurdenner/snippets-table.git"
   },
   "author": "Arthur Denner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/arthurdenner/generate-snippets-table/issues"
+    "url": "https://github.com/arthurdenner/snippets-table/issues"
   },
-  "homepage": "https://github.com/arthurdenner/generate-snippets-table#readme",
+  "homepage": "https://github.com/arthurdenner/snippets-table#readme",
   "devDependencies": {
     "kcd-scripts": "5.6.1"
   },
