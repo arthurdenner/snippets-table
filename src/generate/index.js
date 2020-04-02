@@ -32,7 +32,15 @@ async function generateTable({ pathToREADME, pathToSnippets, headers }) {
       throw Error("Couldn't find start and end tags");
     }
 
-    const snippets = JSON.parse(await readFile(pathToSnippets));
+    let snippets = await readFile(pathToSnippets);
+
+    try {
+      snippets = JSON.parse(snippets);
+    } catch (err) {
+      console.error(chalk.red(err.message));
+      throw Error(`There was an error parsing ${pathToSnippets}`);
+    }
+
     const snippetsLines = createTableLines(snippets, headers);
     const replace = START_TAG.concat('\n\n', snippetsLines, '\n\n', END_TAG);
     const newReadme = readme.replace(regex, replace);
