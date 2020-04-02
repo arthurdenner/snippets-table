@@ -1,6 +1,3 @@
-#!/usr/bin/env node
-/* eslint-disable no-console */
-
 const chalk = require('chalk');
 const fs = require('fs');
 const path = require('path');
@@ -26,7 +23,7 @@ function createTableLines(snippets, headers) {
   return prettier.format(table, { parser: 'markdown' }).trim();
 }
 
-async function generateTable(pathToREADME, pathToSnippets, headers) {
+async function generateTable({ pathToREADME, pathToSnippets, headers }) {
   try {
     const readme = await readFile(pathToREADME);
     const regex = RegExp(`${START_TAG}([\\s\\S]*?)${END_TAG}`);
@@ -42,17 +39,11 @@ async function generateTable(pathToREADME, pathToSnippets, headers) {
 
     await fs.promises.writeFile(pathToREADME, newReadme, 'utf-8');
 
-    console.log(chalk.green('New README created!'));
+    console.log(chalk.green(`${pathToREADME} updated!`));
   } catch (err) {
     console.error(chalk.red(err.message));
     process.exit(1);
   }
 }
-
-generateTable('README.md', 'snippets/snippets.json', [
-  'Prefix',
-  'Name',
-  'Description',
-]);
 
 module.exports = generateTable;
