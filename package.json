@@ -6,6 +6,9 @@
   "bin": {
     "snippets-table": "dist/cli.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "kcd-scripts build",
     "lint": "kcd-scripts lint"
@@ -14,7 +17,10 @@
     "type": "git",
     "url": "git+https://github.com/arthurdenner/snippets-table.git"
   },
-  "author": "Arthur Denner",
+  "keywords": [
+    "snippets-table"
+  ],
+  "author": "Arthur Denner <arthurdenner7@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/arthurdenner/snippets-table/issues"
@@ -29,5 +35,11 @@
     "inquirer": "7.1.0",
     "prettier": "2.0.2",
     "yargs": "15.3.1"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/kcd-scripts/eslint.js",
+    "rules": {
+      "no-process-exit": "off"
+    }
   }
 }
