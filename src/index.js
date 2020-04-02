@@ -8,19 +8,18 @@ const prettier = require('prettier');
 
 const TAG = '<!-- SNIPPETS-TABLE - Do not remove or modify this line -->';
 const readFile = path => fs.promises.readFile(path, 'utf8');
+const getPrefix = p => (Array.isArray(p) ? p.join(', ') : p);
 
 function createTableLines(snippets, headers) {
   const separatorLine = headers.reduce(acc => acc.concat(`--- | `), '\n| ');
-  const headersLines = headers
-    .reduce((acc, header) => acc.concat(`${header} | `), '| ')
-    .concat(separatorLine);
+  const headersLine = headers.reduce((acc, h) => acc.concat(`${h} | `), '| ');
   const bodyLines = Object.keys(snippets).reduce((acc, key) => {
-    const data = snippets[key];
-    const newLine = `\n| \`${data.prefix}\`    | ${key} | ${data.description} |`;
+    const { description = '---', prefix } = snippets[key];
+    const newLine = `\n| \`${getPrefix(prefix)}\` | ${key} | ${description} |`;
 
     return acc.concat(newLine);
   }, '');
-  const table = headersLines.concat(bodyLines);
+  const table = headersLine.concat(separatorLine, bodyLines);
 
   return prettier.format(table, { parser: 'markdown' }).trim();
 }
@@ -29,7 +28,7 @@ async function generateTable(pathToREADME, pathToSnippets, headers) {
   try {
     const readme = await readFile(pathToREADME);
     const foundTag = readme.includes(TAG);
-  
+
     if (!foundTag) {
       throw Error(`Couldn't find tag "${TAG}"`);
     }
@@ -37,10 +36,7 @@ async function generateTable(pathToREADME, pathToSnippets, headers) {
     const snippets = JSON.parse(await readFile(pathToSnippets));
     const snippetsLines = createTableLines(snippets, headers);
 
-    const newReadme = readme.replace(
-      TAG,
-      TAG.concat('\n\n', snippetsLines)
-    );
+    const newReadme = readme.replace(TAG, TAG.concat('\n\n', snippetsLines));
 
     await fs.promises.writeFile('README_new.md', newReadme, {
       encoding: 'utf-8',
@@ -54,8 +50,8 @@ async function generateTable(pathToREADME, pathToSnippets, headers) {
 }
 
 generateTable('README.md', 'snippets/snippets.json', [
-  'Shortcut',
-  'Expanded',
+  'Prefix',
+  'Name',
   'Description',
 ]);
 
