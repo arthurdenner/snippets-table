@@ -6,7 +6,9 @@ const fs = require('fs');
 const path = require('path');
 const prettier = require('prettier');
 
-const TAG = '<!-- SNIPPETS-TABLE - Do not remove or modify this line -->';
+const START_TAG =
+  '<!-- SNIPPETS-TABLE:START - Do not remove or modify this line -->';
+const END_TAG = '<!-- SNIPPETS-TABLE:END -->';
 const readFile = path => fs.promises.readFile(path, 'utf8');
 const getPrefix = p => (Array.isArray(p) ? p.join(', ') : p);
 
@@ -27,20 +29,18 @@ function createTableLines(snippets, headers) {
 async function generateTable(pathToREADME, pathToSnippets, headers) {
   try {
     const readme = await readFile(pathToREADME);
-    const foundTag = readme.includes(TAG);
+    const regex = RegExp(`${START_TAG}([\\s\\S]*?)${END_TAG}`);
 
-    if (!foundTag) {
-      throw Error(`Couldn't find tag "${TAG}"`);
+    if (!regex.test(readme)) {
+      throw Error("Couldn't find start and end tags");
     }
 
     const snippets = JSON.parse(await readFile(pathToSnippets));
     const snippetsLines = createTableLines(snippets, headers);
+    const replace = START_TAG.concat('\n\n', snippetsLines, '\n\n', END_TAG);
+    const newReadme = readme.replace(regex, replace);
 
-    const newReadme = readme.replace(TAG, TAG.concat('\n\n', snippetsLines));
-
-    await fs.promises.writeFile('README_new.md', newReadme, {
-      encoding: 'utf-8',
-    });
+    await fs.promises.writeFile(pathToREADME, newReadme, 'utf-8');
 
     console.log(chalk.green('New README created!'));
   } catch (err) {
