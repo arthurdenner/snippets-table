@@ -1,0 +1,31 @@
+{
+  "name": "generate-snippets-table",
+  "version": "0.0.0",
+  "description": "Tool to easily generate a table of snippets",
+  "main": "dist/index.js",
+  "bin": {
+    "generate-snippets-table": "dist/index.js"
+  },
+  "scripts": {
+    "build": "kcd-scripts build",
+    "lint": "kcd-scripts lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurdenner/generate-snippets-table.git"
+  },
+  "author": "Arthur Denner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arthurdenner/generate-snippets-table/issues"
+  },
+  "homepage": "https://github.com/arthurdenner/generate-snippets-table#readme",
+  "devDependencies": {
+    "kcd-scripts": "5.6.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.9.2",
+    "chalk": "3.0.0",
+    "prettier": "2.0.2"
+  }
+}
