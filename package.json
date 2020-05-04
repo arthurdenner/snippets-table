@@ -1,0 +1,45 @@
+{
+  "name": "snippets-table",
+  "version": "0.0.0-semantically-released",
+  "description": "Tool to easily manage a table of snippets",
+  "main": "dist/cli.js",
+  "bin": {
+    "snippets-table": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "kcd-scripts build",
+    "lint": "kcd-scripts lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurdenner/snippets-table.git"
+  },
+  "keywords": [
+    "snippets-table"
+  ],
+  "author": "Arthur Denner <arthurdenner7@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arthurdenner/snippets-table/issues"
+  },
+  "homepage": "https://github.com/arthurdenner/snippets-table#readme",
+  "devDependencies": {
+    "kcd-scripts": "5.6.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.9.2",
+    "chalk": "3.0.0",
+    "inquirer": "7.1.0",
+    "prettier": "2.0.2",
+    "yargs": "15.3.1"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/kcd-scripts/eslint.js",
+    "rules": {
+      "no-process-exit": "off"
+    }
+  }
+}
