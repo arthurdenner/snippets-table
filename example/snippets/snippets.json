@@ -1,0 +1,32 @@
+{
+  "Sing ABC": {
+    "description": "Song by Jackson 5",
+    "prefix": "abc",
+    "body": [
+      "A, B, C",
+      "Easy as 1, 2, 3",
+      "Or simple as Do-Re-Mi",
+      "A, B, C, 1, 2, 3, baby you and me, girl!"
+    ]
+  },
+  "Sing Take on Me": {
+    "description": "Song by a-ha",
+    "prefix": "takeOnMe",
+    "body": [
+      "Take on me (take on me)",
+      "Take me on (take on me)",
+      "I'll be gone",
+      "In a day or two"
+    ]
+  },
+  "Sing Help": {
+    "description": "Song by The Beatles",
+    "prefix": "help",
+    "body": [
+      "I need somebody",
+      "(Help!) not just anybody",
+      "(Help!) you know I need someone",
+      "Help!"
+    ]
+  }
+}

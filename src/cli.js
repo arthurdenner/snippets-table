@@ -24,7 +24,7 @@ function promptForCommand({ argv }) {
       message: 'What do you want to do?',
       choices: [
         {
-          name: 'Re-generate the table of snippets',
+          name: 'Generate the table of snippets',
           value: 'generate',
         },
       ],
@@ -33,12 +33,12 @@ function promptForCommand({ argv }) {
     },
   ];
 
-  return inquirer.prompt(questions).then(answers => {
+  return inquirer.prompt(questions).then((answers) => {
     return answers.command || argv._[0];
   });
 }
 
-promptForCommand(yargv).then(command => {
+promptForCommand(yargv).then((command) => {
   switch (command) {
     case 'generate':
       return generate(yargv.parsed.argv);
