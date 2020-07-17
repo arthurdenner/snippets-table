@@ -1,5 +1,7 @@
 # snippets-table
 
+![npm](https://img.shields.io/npm/v/snippets-table)
+
 ## Overview
 
 Tool to easily manage a table of snippets on a README file.
@@ -12,23 +14,42 @@ Install the package:
 
 ## Usage
 
-> Check the [`example`](./example) folder.
+- Run it with `npx`:
 
-Add the following lines to the README where the table of snippets should be created:
+  - `npx snippets-table generate`
 
-```markdown
-<!-- SNIPPETS-TABLE:START - Do not remove or modify this line -->
+- Or add the following lines to the README where the table of snippets should be created...
 
-<!-- SNIPPETS-TABLE:END -->
-```
+  ```markdown
+  <!-- SNIPPETS-TABLE:START - Do not remove or modify this line -->
 
-Run the command:
+  <!-- SNIPPETS-TABLE:END -->
+  ```
 
-`npm run snippets-table generate` or `yarn snippets-table generate`
+- And run the command:
+  `npm run snippets-table generate` or `yarn snippets-table generate`
 
-Alternatively, run it with `npx`:
+## Example
 
-`npx snippets-table generate`
+Check the [`example`](./example) folder for more details.
+
+After using this library, a table like below will be created:
+
+| Prefix     | Name            | Description         |
+| ---------- | --------------- | ------------------- |
+| `abc`      | Sing ABC        | Song by Jackson 5   |
+| `help`     | Sing Help       | Song by The Beatles |
+| `takeOnMe` | Sing Take on Me | Song by a-ha        |
+
+## Configuration
+
+| Name             | Default                         |
+| ---------------- | ------------------------------- |
+| `pathToREADME`   | README.md                       |
+| `pathToSnippets` | snippets/snippets.json          |
+| `headers`        | ["Prefix","Name","Description"] |
+
+Run `snippets-table --help` for more.
 
 ## License
 
