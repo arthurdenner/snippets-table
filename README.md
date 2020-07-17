@@ -12,6 +12,8 @@ Install the package:
 
 ## Usage
 
+> Check the [`example`](./example) folder.
+
 Add the following lines to the README where the table of snippets should be created:
 
 ```markdown
