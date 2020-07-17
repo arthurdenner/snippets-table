@@ -6,6 +6,9 @@
   "bin": {
     "snippets-table": "dist/cli.js"
   },
+  "engines": {
+    "node": "10"
+  },
   "files": [
     "dist"
   ],

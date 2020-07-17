@@ -7,13 +7,14 @@ const prettier = require('prettier');
 const START_TAG =
   '<!-- SNIPPETS-TABLE:START - Do not remove or modify this line -->';
 const END_TAG = '<!-- SNIPPETS-TABLE:END -->';
-const readFile = path => fs.promises.readFile(path, 'utf8');
-const getPrefix = p => (Array.isArray(p) ? p.join(', ') : p);
+const readFile = (path) => fs.promises.readFile(path, 'utf8');
+const getPrefix = (p) => (Array.isArray(p) ? p.join(', ') : p);
 
 function createTableLines(snippets, headers) {
-  const separatorLine = headers.reduce(acc => acc.concat(`--- | `), '\n| ');
+  const separatorLine = headers.reduce((acc) => acc.concat(`--- | `), '\n| ');
   const headersLine = headers.reduce((acc, h) => acc.concat(`${h} | `), '| ');
-  const bodyLines = Object.keys(snippets).reduce((acc, key) => {
+  const keys = Object.keys(snippets).sort();
+  const bodyLines = keys.reduce((acc, key) => {
     const { description = '---', prefix } = snippets[key];
     const newLine = `\n| \`${getPrefix(prefix)}\` | ${key} | ${description} |`;
 
