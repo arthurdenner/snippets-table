@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 const fs = require('fs');
 const chalk = require('chalk');
 const prettier = require('prettier');
