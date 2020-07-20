@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@babel/runtime": "7.10.5",
-    "chalk": "3.0.0",
+    "chalk": "4.1.0",
     "inquirer": "7.3.2",
     "prettier": "2.0.5",
     "yargs": "15.4.1"
