@@ -5508,6 +5508,15 @@ jest-runtime@^26.6.3:
     strip-bom "^4.0.0"
     yargs "^15.4.1"
 
+jest-serializer-path@^0.1.15:
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/jest-serializer-path/-/jest-serializer-path-0.1.15.tgz#68528c98e3f8be652484f1c3876228f6864bd662"
+  integrity sha512-sXb+Ckz9LK5bB5sRAXFeG/nwhGn1XBKayy9xhPpgOmAWaljJiS+VN/xJ3P4I19jZ+WejowvO/kES+A9HePTMvQ==
+  dependencies:
+    lodash.clonedeep "^4.5.0"
+    lodash.iserror "^3.1.1"
+    slash "^2.0.0"
+
 jest-serializer@^26.6.2:
   version "26.6.2"
   resolved "https://registry.yarnpkg.com/jest-serializer/-/jest-serializer-26.6.2.tgz#d139aafd46957d3a448f3a6cdabe2919ba0742d1"
@@ -5770,10 +5779,10 @@ jsx-ast-utils@^3.1.0:
     array-includes "^3.1.1"
     object.assign "^4.1.1"
 
-kcd-scripts@7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/kcd-scripts/-/kcd-scripts-7.1.0.tgz#f05e19ac4b27a1bc4c10ea0a081135486556915f"
-  integrity sha512-sn2zi2/GeXka49jQPs5pWcpD705anti/muChaZGNDY5ZcGYLnIj8JGCS5dKluLtxdSkxcf7oLN5XTnkk/WxkYA==
+kcd-scripts@7.3.0:
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/kcd-scripts/-/kcd-scripts-7.3.0.tgz#c93ccda1f573bbc29ecd82e1121045e9731c319f"
+  integrity sha512-M1zzA+a+mEDwU9Nz7DpZRXDZp6coE6fx7A4VvAxQ74kikzl37ASEUubEy7yp/DAC1Io/Igj/eLx/HWU6BFpXUw==
   dependencies:
     "@babel/cli" "^7.12.7"
     "@babel/core" "^7.12.7"
@@ -5811,6 +5820,7 @@ kcd-scripts@7.1.0:
     husky "^4.3.0"
     is-ci "^2.0.0"
     jest "^26.6.3"
+    jest-serializer-path "^0.1.15"
     jest-watch-typeahead "^0.6.1"
     lint-staged "^10.5.1"
     lodash.camelcase "^4.3.0"
@@ -6074,10 +6084,20 @@ lodash.camelcase@^4.3.0:
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
   integrity sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
 
+lodash.clonedeep@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+  integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
+
 lodash.has@^4.5.2:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.has/-/lodash.has-4.5.2.tgz#d19f4dc1095058cccbe2b0cdf4ee0fe4aa37c862"
   integrity sha1-0Z9NwQlQWMzL4rDN9O4P5Ko3yGI=
+
+lodash.iserror@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.iserror/-/lodash.iserror-3.1.1.tgz#297b9a05fab6714bc2444d7cc19d1d7c44b5ecec"
+  integrity sha1-KXuaBfq2cUvCRE18wZ0dfES17Ow=
 
 lodash.omit@^4.5.0:
   version "4.5.0"
@@ -6951,11 +6971,6 @@ prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
-
-prettier@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
-  integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
 
 prettier@2.2.0:
   version "2.2.0"
