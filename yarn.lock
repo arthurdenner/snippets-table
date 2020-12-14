@@ -5802,10 +5802,10 @@ jsx-ast-utils@^3.1.0:
     array-includes "^3.1.1"
     object.assign "^4.1.1"
 
-kcd-scripts@7.5.1:
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/kcd-scripts/-/kcd-scripts-7.5.1.tgz#0615e9a061c3020d3a798ec35d138ab7feddf8de"
-  integrity sha512-gv1cF1DP0DmPxDtt8obrDZvN6bKMxIWjTiIgk9FNgKyJp50gN3EW+cQKaaafCP9levQwaZk1yQgHBNTA1jxIxg==
+kcd-scripts@7.5.3:
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/kcd-scripts/-/kcd-scripts-7.5.3.tgz#4d96595cb3687cd600a2636f2998fbbe2b1655f9"
+  integrity sha512-2cktqvoV3fBkMWNyqrhkSgg5vYGlSxfK1hp1NQKLHfoibHqLDfY323n8EBOMpzqCPpK4zRcm+mSrG5m6ahZQ9A==
   dependencies:
     "@babel/cli" "^7.12.8"
     "@babel/core" "^7.12.9"
