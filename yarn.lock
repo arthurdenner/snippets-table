@@ -2706,10 +2706,10 @@ buffer@^4.3.0:
     ieee754 "^1.1.4"
     isarray "^1.0.0"
 
-builtin-modules@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-3.1.0.tgz#aad97c15131eb76b65b50ef208e7584cd76a7484"
-  integrity sha512-k0KL0aWZuBt2lrxrcASWDfwOLMnodeQjodT/1SxEQAXsHANgo6ZC/VEaSEHCXt7aSTZ4/4H5LKa+tBXmW7Vtvw==
+builtin-modules@^3.1.0, builtin-modules@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-3.2.0.tgz#45d5db99e7ee5e6bc4f362e008bf917ab5049887"
+  integrity sha512-lGzLKcioL90C7wMczpkY0n/oART3MbBa8R9OFGE1rJxoVI86u4WAGfEk8Wjv10eKSyTHVGkSo3bvBylCEtk7LA==
 
 builtin-status-codes@^3.0.0:
   version "3.0.0"
@@ -5802,10 +5802,10 @@ jsx-ast-utils@^3.1.0:
     array-includes "^3.1.1"
     object.assign "^4.1.1"
 
-kcd-scripts@7.6.0:
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/kcd-scripts/-/kcd-scripts-7.6.0.tgz#c6ed221ad140e8e7845be3f25d8be92646c18057"
-  integrity sha512-rM68nNOsok4Icxv3S8Y14f5HYORg3HovqJKeuRxq+ywe37iUebHAMk0Lv7g5KUtRAnIc/0qyuEbDeGNrk86itQ==
+kcd-scripts@7.7.0:
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/kcd-scripts/-/kcd-scripts-7.7.0.tgz#0919f4ab91d6e7d9f53516983422c463785f29f1"
+  integrity sha512-3DagqEwEjjE4Uf85OmMKb3SMr8LoTLFoSvbQguMZPa2ZhH2S3edxgs/uMe+ulbP3T/xyfd7/FbBcCyyhRow6Vg==
   dependencies:
     "@babel/cli" "^7.12.8"
     "@babel/core" "^7.12.9"
@@ -5830,6 +5830,7 @@ kcd-scripts@7.6.0:
     babel-plugin-transform-inline-environment-variables "^0.4.3"
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
     browserslist "^4.14.7"
+    builtin-modules "^3.2.0"
     chalk "^4.1.0"
     concurrently "^5.3.0"
     cosmiconfig "^7.0.0"
