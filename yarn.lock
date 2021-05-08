@@ -5700,6 +5700,11 @@ jest-serializer@^26.6.2:
     "@types/node" "*"
     graceful-fs "^4.2.4"
 
+jest-snapshot-serializer-raw@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/jest-snapshot-serializer-raw/-/jest-snapshot-serializer-raw-1.2.0.tgz#cd67afb5e5cc39d88d518b45e7320dd01ce55148"
+  integrity sha512-Cnp2u7GkaXBVOOelhU94x6Kb/10WJjQtgKDvqynnYGNGQlKBj06x8QZmRkL8XWWVLQ5DKA2fT5rY9kRd512JcA==
+
 jest-snapshot@^26.6.2:
   version "26.6.2"
   resolved "https://registry.yarnpkg.com/jest-snapshot/-/jest-snapshot-26.6.2.tgz#f3b0af1acb223316850bd14e1beea9837fb39c84"
@@ -5964,10 +5969,10 @@ junk@^3.1.0:
   resolved "https://registry.yarnpkg.com/junk/-/junk-3.1.0.tgz#31499098d902b7e98c5d9b9c80f43457a88abfa1"
   integrity sha512-pBxcB3LFc8QVgdggvZWyeys+hnrNWg4OcZIU/1X59k5jQdLBlCsYGRQaz234SqoRLTCgMH00fY0xRJH+F9METQ==
 
-kcd-scripts@9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/kcd-scripts/-/kcd-scripts-9.1.0.tgz#1c695318c79464ae42911324cfd5061f9bb83f76"
-  integrity sha512-+UXO7YGrK5iwEJj1xEOy3jDMnY4wCLOopAiPn592F8ZVbEsRI6znPTKpOUTsvZsxS1OiWY62clvqVrBBK7JzfQ==
+kcd-scripts@10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/kcd-scripts/-/kcd-scripts-10.0.0.tgz#ed1732a030868bf19b5950ee1347794dbdc3f7fb"
+  integrity sha512-B8Sq/NqVhuGVjWDsH9IZMQLSeHTtBzFQXxfHH92EWus0u5EP1HtJ7XJBmFZOkhITGcutvylGSJwrlGGPv/wlIg==
   dependencies:
     "@babel/cli" "^7.13.14"
     "@babel/core" "^7.13.15"
@@ -6007,6 +6012,7 @@ kcd-scripts@9.1.0:
     is-ci "^3.0.0"
     jest "^26.6.3"
     jest-serializer-path "^0.1.15"
+    jest-snapshot-serializer-raw "^1.2.0"
     jest-watch-typeahead "^0.6.2"
     lint-staged "^10.5.4"
     lodash.camelcase "^4.3.0"
