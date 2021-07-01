@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/arthurdenner/snippets-table#readme",
   "devDependencies": {
-    "kcd-scripts": "10.1.1"
+    "kcd-scripts": "11.1.0"
   },
   "dependencies": {
     "@babel/runtime": "7.14.6",
