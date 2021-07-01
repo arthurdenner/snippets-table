@@ -37,7 +37,7 @@
     "@babel/runtime": "7.14.0",
     "chalk": "4.1.1",
     "inquirer": "8.1.0",
-    "prettier": "2.3.0",
+    "prettier": "2.3.2",
     "yargs": "17.0.1"
   },
   "eslintConfig": {
