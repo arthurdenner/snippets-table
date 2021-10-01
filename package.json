@@ -34,7 +34,7 @@
     "kcd-scripts": "11.2.0"
   },
   "dependencies": {
-    "@babel/runtime": "7.15.3",
+    "@babel/runtime": "7.15.4",
     "chalk": "4.1.2",
     "inquirer": "8.1.2",
     "prettier": "2.3.2",
