@@ -5686,10 +5686,10 @@ junk@^3.1.0:
   resolved "https://registry.yarnpkg.com/junk/-/junk-3.1.0.tgz#31499098d902b7e98c5d9b9c80f43457a88abfa1"
   integrity sha512-pBxcB3LFc8QVgdggvZWyeys+hnrNWg4OcZIU/1X59k5jQdLBlCsYGRQaz234SqoRLTCgMH00fY0xRJH+F9METQ==
 
-kcd-scripts@11.2.0:
-  version "11.2.0"
-  resolved "https://registry.yarnpkg.com/kcd-scripts/-/kcd-scripts-11.2.0.tgz#a1b9eabbfbbd2d0657ed86385c3f2644124171f3"
-  integrity sha512-Ap2EMlOjrkayqX0VzowJqslPY/xPR+FyEfBD7xOy/81wSyYqOSQAv93F4g1fLdtLz2ftf/U/kblyQ3fIw8ilpQ==
+kcd-scripts@11.2.2:
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/kcd-scripts/-/kcd-scripts-11.2.2.tgz#c5674c57b87d6c524b35e440c149e50be2b87536"
+  integrity sha512-FnmECQNVIf5tbA9z5RSfzZ8s5e8VUwCt+kf4/u9YBzHH3l9fraxfsD/g3cz+VlYUxA/DC/QQ/digmdf2dMWkRw==
   dependencies:
     "@babel/cli" "^7.14.5"
     "@babel/core" "^7.14.6"
